@@ -1,3 +1,5 @@
+package Control;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -97,12 +99,13 @@ public class Logic {
 		try {
 	x=new Scanner (new File("Test2.txt"));
 	while(x.hasNext()) {
-		if(x.next().contains(username)) {
+		if(x.next().contains(username+",")) 
+		{
 			result=true;	
 		}
 	}
 	x.close();
-	return result;
+	
 		}
 		catch(Exception e) {
 			System.out.println(e);
